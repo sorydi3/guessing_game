@@ -8,10 +8,14 @@ fn main() {
 
     let mut guess : String = String::new();
 
-    io::stdin().read_line(&mut guess).expect("I don't know");
+    let result:Result<usize ,io::Error> =io::stdin().read_line(&mut guess);
 
+    if result.is_ok() {
+        println!("you guessed the number: {guess}");
+    }
+
+    if result.is_err() {
+        println!("somthing when wrong while reading the user guess!!!")
+    }
     //let user_guess :usize = result.expect("I don't know");
-
-    println!("you guessed the number: {guess}");
-
 }
