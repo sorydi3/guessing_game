@@ -11,7 +11,7 @@ fn main() {
     println!("PLEASE ENTER THE NUMBER!");
 
     let secret_number:u32 = thread_rng().gen_range(1..100);
-    println!("somthing migh have been when wrong!!! SECRET NUMBER: {secret_number}");  
+    println!("Somthing migh have been when wrong!!! SECRET NUMBER: {secret_number}");  
     
     loop {
 
